@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6 Arrow Functions</title>
+    <script type="text/javascript">
+
+        const race = '100m Dash';
+        const winners = ['Hunter Gath', 'Singa Song','Imda Bos'];
+
+        // 1st way of arrow function returning an object
+        const win = winners.map((winner,i) => ({name: winner, race: race, place: i+1}))
+
+        // 2nd way of arrow function returning an object by reducing redundant variable 'race'
+        const win2 = winners.map((winner,i) => ({name: winner, race, place: i+1}))
+
+
+        /**
+         * Another example by filtering people by age up to or over 60
+         */
+        const ages = [23,62,45,234,2,62,234,62,34];
+
+        const old = ages.filter((age) => age >= 60)
+        console.log(old);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
