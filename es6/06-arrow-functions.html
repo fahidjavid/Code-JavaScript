@@ -11,20 +11,43 @@
         // map
         // filter
         // reduce
-        
-
-        const megaSimple = 3;
-
-        (function(){
-            var megaTron = 10;
-            console.log(megaTron);
-
-        })();
 
         {
-            let megaTron = 5;
+            let megaTron = [43,67,98,25];
 
-            console.log(megaTron);
+             const increased = megaTron.map(function (item) {
+                return item + 1;
+            });
+
+            const increased2 = megaTron.map( (item) => {
+                return item + 2;
+            });
+
+            const increased3 = megaTron.map(item => {
+                return item + 3;
+            });
+
+            // if single parameter we can call function without parentheses
+            const increased4 = megaTron.map(item => item + 4);
+
+            // when there are no parameters
+            const increased5 = megaTron.map(() =>  "😉 ");
+
+            console.log(increased);
+            console.log(increased2);
+            console.log(increased3);
+            console.log(increased4);
+            console.log(increased5);
+
+            /**
+             *  Anonymous functions can't have a name
+             *  So if we want to set a name to anonymous function
+             *  then we need to follow the following rule
+             *  */
+
+            const sayMyName = (name) => { alert(`Hello ${name}!`) }
+
+            sayMyName("Fahid Javid");
         }
 
     </script>
