@@ -13,13 +13,13 @@
         // reduce
 
         {
-            let megaTron = [43,67,98,25];
+            let megaTron = [43, 67, 98, 25];
 
-             const increased = megaTron.map(function (item) {
+            const increased = megaTron.map(function (item) {
                 return item + 1;
             });
 
-            const increased2 = megaTron.map( (item) => {
+            const increased2 = megaTron.map((item) => {
                 return item + 2;
             });
 
@@ -31,7 +31,7 @@
             const increased4 = megaTron.map(item => item + 4);
 
             // when there are no parameters
-            const increased5 = megaTron.map(() =>  "😉 ");
+            const increased5 = megaTron.map(() => "😉 ");
 
             console.log(increased);
             console.log(increased2);
@@ -45,7 +45,9 @@
              *  then we need to follow the following rule
              *  */
 
-            const sayMyName = (name) => { alert(`Hello ${name}!`) }
+            const sayMyName = (name) => {
+                alert(`Hello ${name}!`)
+            }
 
             sayMyName("Fahid Javid");
         }
