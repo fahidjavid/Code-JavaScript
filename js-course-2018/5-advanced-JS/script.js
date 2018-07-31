@@ -19,6 +19,28 @@ Person.prototype.lastName = 'Smith';
 
 var fahid = new Person('Fahid', 1992, 'Developer');
 
-fahid.calculateAge();
-console.log(fahid.lastName);
+// fahid.calculateAge();
 
+
+
+//  Object.create
+var personProto = {
+    calculateAge: function () {
+        console.log(2018 - this.yearOfBirth);
+    }
+};
+
+var fahid = Object.create(personProto);
+fahid.name = 'Fahid';
+fahid.yearOfBirth = 1992;
+fahid.job = 'Developer';
+
+// fahid.calculateAge();
+
+var jane = Object.create(personProto, {
+    name: {value: 'Jane'},
+    yearOfBirth: {value: 1990},
+    job: {value: 'Developer'}
+});
+
+jane.calculateAge();
