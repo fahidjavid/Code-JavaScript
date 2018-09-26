@@ -89,7 +89,7 @@ change(age, obj);
 
 
 ////////////////////////////////
-// Lecture: Passing functions as arguments
+// Lecture: 065 First Class Functions Passing Functions as Arguments
 
 var years = [1990, 1965, 1937, 2005, 1998];
 
