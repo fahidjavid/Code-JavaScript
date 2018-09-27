@@ -158,3 +158,14 @@ var designerQuestion = interviewQuestion('designer');
 // teacherQuestion('John');
 // designerQuestion('Fahid');
 // interviewQuestion('designer')('Ahmed');
+
+//####################################################################################
+// Lecture: 067 Immediately Invoked Function Expressions (IIFE)
+//####################################################################################
+(function (goodLuck){
+    var score = Math.random() * 10;
+    console.log(score >= 5 - goodLuck);
+})(5);
+
+/* Result */
+// console.log(score);
