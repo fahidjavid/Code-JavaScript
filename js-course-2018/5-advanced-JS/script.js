@@ -88,8 +88,9 @@ change(age, obj);
 // console.log(obj.city);
 
 
-////////////////////////////////
+//####################################################################################
 // Lecture: 065 First Class Functions Passing Functions as Arguments
+//####################################################################################
 
 var years = [1990, 1965, 1937, 2005, 1998];
 
@@ -125,6 +126,35 @@ var ages = arraycalc(years, calculateAge);
 var fullAges = arraycalc(ages, isFullAge);
 var heartRates = arraycalc(ages, maxHeartRate);
 
-console.log(ages);
-console.log(fullAges);
-console.log(heartRates);
+/* Result */
+// console.log(ages);
+// console.log(fullAges);
+// console.log(heartRates);
+
+//####################################################################################
+// Lecture: 066 First Class Functions Functions Returning Functions
+//####################################################################################
+
+function interviewQuestion(job) {
+    if (job === 'designer') {
+        return function(name){
+            console.log(name + ', can you please explain what UX design is?');
+        }
+    } else if (job === 'teacher') {
+        return function(name){
+            console.log('What subject do you teach, ' + name + '?');
+        }
+    } else {
+        return function(name){
+            console.log('Hello, ' + name + 'what do you do?');
+        }
+    }
+}
+
+var teacherQuestion = interviewQuestion('teacher');
+var designerQuestion = interviewQuestion('designer');
+
+/* Result */
+// teacherQuestion('John');
+// designerQuestion('Fahid');
+// interviewQuestion('designer')('Ahmed');
