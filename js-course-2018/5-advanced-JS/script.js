@@ -164,8 +164,32 @@ var designerQuestion = interviewQuestion('designer');
 //####################################################################################
 (function (goodLuck){
     var score = Math.random() * 10;
-    console.log(score >= 5 - goodLuck);
+    // console.log(score >= 5 - goodLuck);
 })(5);
 
 /* Result */
 // console.log(score);
+
+//####################################################################################
+// Lecture: 068 Closures
+//####################################################################################
+function retirement(retirementAge) {
+    var a = ' years left until retirement.';
+    return function(yearOfBirth) {
+        var age = 2016 - yearOfBirth;
+        console.log((retirementAge - age) + a)
+    }
+}
+
+var retirementUS = retirement(66);
+var retirementGermany = retirement(65);
+var retirementIceland = retirement(65);
+
+// retirementUS(1990);
+// retirementGermany(1990);
+// retirementIceland(1990);
+
+
+
+
+// retirement(66)(1990);
