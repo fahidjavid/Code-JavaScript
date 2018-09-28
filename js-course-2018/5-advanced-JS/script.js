@@ -189,7 +189,64 @@ var retirementIceland = retirement(65);
 // retirementGermany(1990);
 // retirementIceland(1990);
 
-
-
-
 // retirement(66)(1990);
+
+//####################################################################################
+// Lecture: 069 Bind Call and Apply
+//####################################################################################
+
+var john = {
+    name: 'John',
+    age: 26,
+    job: 'teacher',
+    presentation: function(style, timeOfDay) {
+        if( style === 'formal' ) {
+            console.log(
+                'Good ' + timeOfDay
+                + ' gentlemen! I\'m '
+                + this.name + ' I\'m a '
+                + this.job
+                + ' and I\'m '
+                + this.age
+                + ' years old. Have a nice '
+                + timeOfDay
+                + '.'
+            );
+        } else if ( style === 'friendly' ) {
+            console.log(
+                'Hey! what\'s up? I\'m '
+                + this.name + ' I\'m a '
+                + this.job
+                + ' and I\'m '
+                + this.age
+                + ' years old. Have a nice '
+                + timeOfDay
+                + '.'
+            );
+        }
+    }
+}
+
+// john.presentation('formal', 'morning');
+
+var emily = {
+    name: 'Emily',
+    age: 35,
+    job: 'designer'
+}
+
+// call method
+// john.presentation.call(emily, 'friendly', 'afternoon');
+
+// apply method
+// john.presentation.apply(emily, ['friendly', 'afternoon']);
+
+// bind method
+var johnFriendly = john.presentation.bind(john, 'friendly');
+
+// johnFriendly('morning');
+// johnFriendly('night');
+
+var emilyFormal = john.presentation.bind(emily, 'formal');
+
+// emilyFormal('afternoon');
