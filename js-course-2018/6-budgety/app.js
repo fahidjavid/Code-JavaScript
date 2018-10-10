@@ -1,26 +1,26 @@
 
+// BUDGET CONTROLLER
 var budgetController = (function(){
-    var x = 23;
 
-    var add = function(a) {
-        return x + a;
-    }
+    // write code
 
-    return {
-        publicTest: function (b) {
-            console.log(add(b));
-        }
-    }
 })();
 
+
+
+// UI CONTROLLER
 var UIController = (function () {
 
     // write code
 
 });
 
+
+// GLOBAL APP CONTROLLER
 var controller = (function (budgetCtrl, UICtrl) {
 
-    // write code
+     document.querySelector( '.add__btn').addEventListener('click', function () {
+         console.log('Button was clicked.');
+     })
 
 })(budgetController, UIController);
